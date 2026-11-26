@@ -6,7 +6,7 @@ const noteSchema = new Schema(
     content: { type: String, default: '' },
     tags: { type: [String], default: [] },
     attachmentUrl: String,
-    owner: String
+    owner: { type: String, required: true, index: true },
   },
   { timestamps: true }
 );
